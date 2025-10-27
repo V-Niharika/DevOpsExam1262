@@ -1,0 +1,6 @@
+api:v1
+metadata{
+matchlabel{
+port:appname
+-container:-image:<image-name>:latest
+}}
