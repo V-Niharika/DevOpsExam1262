@@ -1,6 +1,13 @@
-api:v1
-metadata{
-matchlabel{
-port:appname
--container:-image:<image-name>:latest
-}}
+apiverdion: v1
+kind: Service
+metadata:
+  name: kubedemoapp-Service
+spec:
+  selector:
+    app: kubedemoapp
+  ports:
+    - protocol: TCP
+      port:5000
+      targetPort: 5000
+      nodePort: 30080
+  type:NodePort
